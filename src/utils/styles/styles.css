@@ -1,0 +1,456 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: MD;
+    scroll-behavior: smooth;
+ }
+/* 
+
+ ДЕФОЛТНЫЕ НАСТРОЙКИ
+
+*/
+ main {
+  flex: 1;
+}
+html, body, #root {
+  height: 100%;
+  margin: 0;
+ scroll-behavior: smooth;
+}
+html {
+  scroll-behavior: smooth; /* Плавный скролл для всей страницы */
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+h1{
+    font-family: BD;
+}
+/* 
+
+    ШРИФТЫ
+
+*/
+@font-face {
+    font-family: MD;
+    src: url('../fonts/Montserrat-Medium.ttf');
+}
+@font-face {
+    font-family: BD;
+    src: url('../fonts/Montserrat-Bold.ttf');
+}
+
+
+.main-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.footer-container {
+  width: 100%;
+  background-color: rgb(34, 34, 34);
+  min-height: 150px;
+  color: white;
+  text-align: center;
+  margin-top: auto; 
+}
+.footer-container h2{
+    margin: 5px;
+}
+.footer-container ul{
+    width: 100%;
+    height: 100%;
+}
+.footer-container li{
+    height: 100%;
+    padding: 15px;
+}
+/* КАРТОЧКИ */
+.card-container {
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Отступ между карточками */
+    justify-content: center; /* Центрирование карточек */
+    max-width: 1110px; /* 350px * 3 + 20px * 2 */
+    margin: 0 auto; /* Центрирование контейнера */
+}
+
+.card-container > div {
+    width: 350px; /* Фиксированная ширина карточки */
+    
+}
+
+
+.card-container ul {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Чтобы все карточки были одной высоты */
+    margin: 0; /* Убираем стандартные отступы */
+}
+
+.card-container li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-container h1 {
+    text-align: center;
+    font-size: 20px;
+    margin: 0 0 10px 0; /* Отступ только снизу */
+}
+.card-container h2 {
+    text-align: center;
+    font-size: 20px;
+    margin: 0 0 10px 0; /* Отступ только снизу */
+}
+
+.card-container img {
+    border-radius: 5px;
+    width: 100%; /* Чтобы изображение занимало всю ширину карточки */
+    height: 350px; /* Сохраняем пропорции */
+    object-fit: cover;
+}
+
+/* СЛАЙДЕР */
+.main-slider{
+    width: 60%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    
+}
+.main-slider img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    filter: brightness(50%);
+}
+.main-slider video{
+    width: 100%;
+    filter: brightness(50%);
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.slider-container{
+    z-index: -1;
+    width: 100%;
+}
+.slider-container h1{
+    z-index: 1;
+    position: absolute;
+    align-items: center;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    color: rgb(228, 228, 228);
+    text-align: center;
+    font-size: 50px;
+    width: 100%;
+}
+/* 
+
+    ЦЕНТРИРОВАНИЕ
+
+*/
+
+.centered{
+    display: flex;
+    justify-content: center;
+}
+.card-centered{
+    margin-top: 1%;
+    margin-bottom: 1%;
+
+
+}
+
+/* 
+
+    СЛАЙДЕР ПРОЕКТОВ
+
+*/
+.project-slider{
+    
+}
+
+/* 
+
+    БАННЕР
+
+*/
+.banner-container video{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+.banner-container {
+    width: 100%;
+}
+.banner-text{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 65%;
+    border-radius: 600px;
+    height: 70px;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #00b7ff;
+    margin-top: 1%;
+}
+
+.banner-text-inner h1 {
+    font-size: 45px;
+    color: white;
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.banner-text-inner video {
+    z-index: -1;
+    object-fit: cover;
+    width: 100%;
+    
+}
+
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 25%; 
+    overflow: hidden;
+    
+}
+
+.banner-text-inner {
+    position: relative;
+    height: 30%;
+    
+}
+/* 
+    ПРЕИМУЩЕСТВА КОМПАНИИ
+*/
+.advantage-card{
+    margin: 10px;
+    justify-content: center;
+    max-width: 280px;
+    min-height: 250px;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 0px 10px 0px 10px;
+    border-radius: 15px;
+    color: #00b7ff;
+    height: 100%;
+}
+.advantage-card li{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.advantage-card img{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.advantage-card h3{
+    color: rgb(41, 41, 41);
+    text-align: center;
+    font-size: 15px;
+
+    padding: 15px;
+}
+.advantage-card h1{
+
+    font-size: 20px;
+    text-align: center;
+}
+.advantage-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; 
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+@media screen and (max-width:630px) {
+    .banner-container {
+        width: 100%;
+    }
+    .banner-text{
+        margin-top: 1%;
+        margin-bottom: 1%;
+        text-align: center;
+        height: 50px;
+    }
+    .banner-text h1{
+        font-size: 14px;
+    }
+    .banner-text-inner h1 {
+        text-align: center;
+        font-size: 25px;
+        width: 100%;
+    }
+    .banner-text-inner video {
+        z-index: -1;
+        object-fit: cover;
+        width: 100%;
+        min-height: 400px;
+        height: 100%;
+    }
+
+    .banner-container {
+        position: relative;
+        width: 100%;
+        height: 25%; 
+        overflow: hidden;
+    }
+
+    .banner-text-inner {
+        position: relative;
+        height: 100%;
+    }
+    .slider-container h1{
+        font-size: 20px;
+    }
+    .yandex-map{
+        padding: 15px;
+    }
+}
+
+/*
+    YANDEX MAP
+*/
+ /* width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;" */
+ .yandex-map{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height:480px;
+    position: relative;
+    margin-top: 1%;
+    border: none;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.250);
+    margin-bottom: 1%;
+    max-width: 1000px;
+    border-radius: 15px;
+
+ }
+ .yandex-map iframe{
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    width: 100%;
+    height: 480px;
+ }
+/*
+ ВТОРОСТЕПЕННЫЕ СТИЛИ
+*/
+ul li{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+.description{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    text-transform: uppercase;
+    font-family: MD;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    color: rgba(0, 0, 0, 0.75);
+}
+.choosen-card img:hover{
+   transform: scale(1.02,1.02);
+   transition: 0.2s;
+   cursor: pointer;
+   
+}
+.choosen-card{
+    color: #404040;
+}
+.choosen-card img{
+    transition: 0.2s;
+}
+.background-abstract{
+    background-image: url('../../static/brick_wall.svg');
+    width: 100%;
+    height: 253px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+/* КАЛЬКУЛЯТОР */
+.calculator-container{
+    height: 100vh;
+    color: black;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.calculator-container form{
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    width: 50%;
+    padding: 15px;
+    border-radius: 15px;
+}
+.calculator-container ul li{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 3%;
+}
+.calculator-container input{
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    height: 50px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+.calculator-container button{
+    height: 50px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    background-color: #00b7ff;
+    transition: 0.2s;
+}
+.calculator-container h1{
+    margin-bottom: 1%;
+}
+.calculator-container button:hover{
+    opacity: 0.7;
+    transition: 0.2s;
+}
