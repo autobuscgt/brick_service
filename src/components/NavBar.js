@@ -40,7 +40,7 @@ function NavBar() {
     >
       <nav className='navbar'>
         <ul>
-          <li><NavLink to={HOMEPAGE_ROUTE}><img src={LOGO} alt="Logo" /></NavLink></li>
+          <li><NavLink to={HOMEPAGE_ROUTE}><img src={LOGO} alt="Logo" loading='lazy'/></NavLink></li>
           <li><a href='#advantage'>Преимущества</a></li>
           <li><a href="#catalog" >Продукция</a></li>
           <li><a href='#contacts'>Контакты</a></li>

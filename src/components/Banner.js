@@ -1,5 +1,5 @@
-import React from 'react';
-import production_video from '../static/background utils/background.mov'
+
+import production_video from '../static/background utils/background.webm'
 function Banner() {
     return (
         <div className='banner-container'>

@@ -1,23 +1,35 @@
 
-import Slider from '../components/Slider';
-import Banner from '../components/Banner';
-import Cards from '../components/Cards';
+
+import { lazy, Suspense } from 'react';
+
 import Advantage from '../components/Advantage';
 import TextHM from '../components/Text';
-import YandexMap from '../components/YandexMap';
-import TEMP from '../components/TEMP';
+
+const Banner = lazy( ()=> import('../components/Banner') )
+const Slider = lazy( ()=> import('../components/Slider') )
+const Cards = lazy(()=> import('../components/Cards'))
+const YandexMap = lazy(()=> import('../components/YandexMap'))
+const TEMP = lazy(()=> import('../components/TEMP'))
 
 function Homepage() {
     return (
         <div className='content'>
-            <Banner/>
+            <Suspense fallback={<p>Loading...</p>}>
+                <Banner/>
+            </Suspense>
             <TextHM prop={'Наши работы'}/>
-            <Slider frst = 'Большой выбор' scnd ='Разные цвета'  thrd='Свое производство'/>
-            <div className='description'>
-                <TEMP/>
-            </div>
+            <Suspense>
+                <Slider frst = 'Большой выбор' scnd ='Разные цвета'  thrd='Свое производство'/>
+            </Suspense>
+            <Suspense fallback={<p>Loading...</p>}>
+                    <div className='description'>
+                        <TEMP/>
+                    </div>
+            </Suspense>
             <TextHM prop={'Товары'}/>
-            <Cards/>
+            <Suspense fallback={<p>Loading...</p>}>
+                <Cards/>
+            </Suspense>
                 <TextHM prop={'Преимущества компании'}/>
             <Advantage/>
             {/* <TextHM prop={'Проекты'}/>
@@ -25,7 +37,9 @@ function Homepage() {
             <ProjectSlider/>
             </div> */}
             <TextHM prop={'Где нас можно найти ?'}/> 
-            <YandexMap/>
+            <Suspense fallback={<p>Loading...</p>}>
+                 <YandexMap/>
+            </Suspense>
             <div className='background-abstract'/>
         </div>
     );

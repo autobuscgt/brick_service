@@ -4,10 +4,11 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 
 import '@splidejs/react-splide/css/core';
-import production_video from '../static/background utils/video_slider.mov'
+import production_video from '../static/background utils/video_slider.webm'
 
 import colors from '../static/banner_photos/colors.png'
 import wide_range from '../static/banner_photos/wide_range.png'
+
 function Slider({frst,scnd,thrd}) {
     return (
     <div className='centered'>
@@ -31,7 +32,7 @@ function Slider({frst,scnd,thrd}) {
     <SplideSlide>
         <div className='slider-container'>
             <h1>{frst}</h1>
-            <img src={colors} alt=" 1"/>
+            <img src={colors} alt=" 1" loading='lazy'/>
         </div>
           </SplideSlide>
 
@@ -39,7 +40,7 @@ function Slider({frst,scnd,thrd}) {
     <SplideSlide>
         <div className='slider-container'>
             <h1>{scnd}</h1>
-             <img src={wide_range} alt=" 2"/>
+             <img src={wide_range} alt=" 2" loading='lazy'/>
         </div>
            </SplideSlide>
 
