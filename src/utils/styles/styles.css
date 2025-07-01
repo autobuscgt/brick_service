@@ -408,49 +408,13 @@ ul li{
     z-index: -1;
 }
 /* КАЛЬКУЛЯТОР */
-.calculator-container{
-    height: 100vh;
-    color: black;
-    align-items: center;
+.calculator{
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    
+    align-items: center;
+    margin-top: 5%;
 }
-.calculator-container form{
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    width: 50%;
-    padding: 15px;
-    border-radius: 15px;
-}
-.calculator-container ul li{
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px;
-    margin-top: 3%;
-}
-.calculator-container input{
-    width: 100%;
-    padding: 0px;
-    margin: 0px;
-    height: 50px;
-    border: 1px solid grey;
-    border-radius: 5px;
-}
-.calculator-container button{
-    height: 50px;
-    width: 100%;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    background-color: #00b7ff;
-    transition: 0.2s;
-}
-.calculator-container h1{
-    margin-bottom: 1%;
-}
-.calculator-container button:hover{
-    opacity: 0.7;
-    transition: 0.2s;
+
+.calculator a{
+    display: none;
 }

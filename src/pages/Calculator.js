@@ -1,18 +1,15 @@
 
 function Calculator() {
     return (
-        <div className='calculator-container'>
-            <h1>Калькулятор продукции</h1>
-            <form>
-                <ul>
-                    <li><input placeholder="" type=""/></li>
-                    <li><input placeholder="" type=""/></li>
-                    <li><input placeholder="" type=""/></li>
-                    <li><input placeholder="" type=""/></li>
-                    <li> <button>Рассчитать стоимость</button> </li>
-                </ul>
-            </form>
+        <div className="calculator">
+            <iframe 
+            src="https://stroy-calc.ru/widj?str=raschet-kirpicha&bgcol=fff&tcol=404040&elcol=00b7ff&dis=none" 
+            width="100%" 
+            height="920px" 
+            ></iframe>
         </div>
+
+
     );
 }
 
