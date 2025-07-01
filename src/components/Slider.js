@@ -1,6 +1,5 @@
 
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 // Default theme
 import '@splidejs/react-splide/css';
 

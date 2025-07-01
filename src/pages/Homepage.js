@@ -1,9 +1,8 @@
-import React from 'react';
+
 import Slider from '../components/Slider';
 import Banner from '../components/Banner';
 import Cards from '../components/Cards';
 import Advantage from '../components/Advantage';
-import ProjectSlider from '../components/ProjectSlider';
 import TextHM from '../components/Text';
 import YandexMap from '../components/YandexMap';
 import TEMP from '../components/TEMP';
