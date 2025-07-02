@@ -1,17 +1,21 @@
+function Banner({ kartinka, production_video,text}) {
+  const hasVideo = production_video && production_video.trim() !== '';
 
-import production_video from '../static/background utils/background.webm'
-function Banner() {
-    return (
-        <div className='banner-container'>
-            <div className='banner-text-inner'>
-            <h1>ВОЛГОГРАДСКИЙ <br/> ОБЛИЦОВОЧНЫЙ КИРПИЧ</h1>
-            <video autoPlay loop muted playsInline>
-                <source src={production_video} ></source>
-            </video>
-            </div>
-
-        </div>
-    );
+  return (
+    <div className='banner-container'>
+      <div className='banner-text-inner'>
+        <h1>{text}</h1>
+        {hasVideo ? (
+          <video autoPlay loop muted playsInline>
+            <source src={production_video} />
+            Ваш браузер не поддерживает видео.
+          </video>
+        ) : (
+          <img src={kartinka} alt="banner-photo" />
+        )}
+      </div>
+    </div>
+  );
 }
 
 export default Banner;

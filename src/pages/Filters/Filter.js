@@ -1,12 +1,24 @@
-import React from 'react';
+import { useState } from 'react';
+import FilterButtons from './FilterButtons';
 
-function Filter({sizeOfOneDotFour,sizeOfOne}) {
-    return (
-        <div className='filter-container'>
-                <input placeholder='1 НФ' type='radio'></input>
-                <input placeholder='1.4 НФ' type='radio'></input>
-        </div>
-    );
+function Filter({ filtered, children }) {
+  const [filteredData, setFilteredData] = useState(filtered);
+
+  const filterByType = (type) => {
+    if (type === 'all') {
+      setFilteredData(filtered);
+    } else {
+      const newData = filtered.filter(item => item.type === type);
+      setFilteredData(newData);
+    }
+  };
+
+  return (
+    <>
+      <FilterButtons onFilterChange={filterByType} />
+      {children(filteredData)}
+    </>
+  );
 }
 
 export default Filter;

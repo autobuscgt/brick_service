@@ -4,6 +4,8 @@ import { lazy, Suspense } from 'react';
 
 import Advantage from '../components/Advantage';
 import TextHM from '../components/Text';
+import production_video from '../static/background utils/background.webm'
+
 
 const Banner = lazy( ()=> import('../components/Banner') )
 const Slider = lazy( ()=> import('../components/Slider') )
@@ -15,7 +17,9 @@ function Homepage() {
     return (
         <div className='content'>
             <Suspense fallback={<p>Loading...</p>}>
-                <Banner/>
+                <Banner production_video={production_video} kartinka={' '} text={(
+                    <>ВОЛГОГРАДСКИЙ <br/>ОБЛИЦОВОЧНЫЙ КИРПИЧ</>
+                )}/>
             </Suspense>
             
 

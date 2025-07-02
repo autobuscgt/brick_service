@@ -6,7 +6,7 @@ import red from '../../static/temp_photos/red.jpeg'
 import chocolate from '../../static/temp_photos/chocolate.jpeg'
 import graphite from '../../static/temp_photos/graphite.jpeg'
 import { useNavigate, useParams } from 'react-router-dom'
-
+import kartinka from '../../static/colors/grey.png'
 import Banner from '../../components/Banner'
 import { useState } from 'react'
 
@@ -17,7 +17,6 @@ function MonoColor() {
     const size2 = (<div> 1НФ (одинарный) <br/>
                     Размер: 250*120*65 <br/>
                     Фактура (вид): гладкий</div> )
-    
         const bricks = [
         {id:1,name:'Белый',description:size2,price:'',image:white, type:'1 НФ'},
         {id:2,name:'Белый',description:size1,price:'',image:white, type:'1.4 НФ'},
@@ -38,7 +37,6 @@ function MonoColor() {
     const handleClick = ()=> {
         navigate(`/product ${id}`)
     }
-
     const filterByType = (type) => { 
         if (type === 'all') {
             setData(bricks)
@@ -47,18 +45,17 @@ function MonoColor() {
             setData(newData)
         }
     }
-
     return (
         <div>
-        <Banner/>
+        <Banner kartinka={kartinka} text={(
+            <>Моноцвет</>
+        )}/>
         <div className='centered' style={{marginTop:'1%'}}> 
         <div className='filter-container'>
             <button onClick={() => filterByType('all')}>Все</button>
             <button onClick={() => filterByType('1 НФ')}>1 НФ</button>
             <button onClick={() => filterByType('1.4 НФ')}>1.4 НФ</button>
         </div>
-
-
         <div className='brick-container'> 
             {filteredData.map((brick)=>(
                 <div className='brick-card' key={brick.id}>
@@ -71,7 +68,8 @@ function MonoColor() {
                     </ul>
                 </div>
             ))}
-        </div></div>
+        </div>
+        </div>
         </div>
     );
 }
