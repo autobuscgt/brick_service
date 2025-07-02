@@ -21,8 +21,6 @@ function Homepage() {
                     <>ВОЛГОГРАДСКИЙ <br/>ОБЛИЦОВОЧНЫЙ КИРПИЧ</>
                 )}/>
             </Suspense>
-            
-
             <Suspense fallback={<p>Loading...</p>}>
                     <div className='description'>
                         <TEMP/>

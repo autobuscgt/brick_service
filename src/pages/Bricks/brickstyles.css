@@ -1,11 +1,14 @@
-.brick-container{
+.brick-container {
+  display: flex;
+  justify-content: center; /* Элементы начинаются слева внутри этого блока */
+  flex-wrap: wrap; /* если нужно переносить элементы на новую строку */
+}
+
+
+.bricks-centered{
+    justify-content: center;
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: start;
-    margin-left: auto;
-    margin-right: auto;
+    flex-direction: column;
 }
 .brick-card{
     width: 300px;

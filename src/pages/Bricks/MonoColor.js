@@ -45,33 +45,32 @@ function MonoColor() {
             setData(newData)
         }
     }
-    return (
-        <div>
-        <Banner kartinka={kartinka} text={(
-            <>Моноцвет</>
-        )}/>
-        <div className='centered' style={{marginTop:'1%'}}> 
-        <div className='filter-container'>
-            <button onClick={() => filterByType('all')}>Все</button>
-            <button onClick={() => filterByType('1 НФ')}>1 НФ</button>
-            <button onClick={() => filterByType('1.4 НФ')}>1.4 НФ</button>
-        </div>
-        <div className='brick-container'> 
-            {filteredData.map((brick)=>(
-                <div className='brick-card' key={brick.id}>
-                    <ul>
-                        <li> <img src={brick.image} alt='brick-photo'/> </li>
-                        <li> <h1>{brick.name}</h1> </li>
-                        <li> {brick.description} </li>
-                        <li> {brick.price}</li>
-                        <li> <button onClick={() => handleClick}>Подробнее</button></li>
-                    </ul>
-                </div>
-            ))}
-        </div>
-        </div>
-        </div>
-    );
+return (
+  <div>
+    <Banner kartinka={kartinka} text={(
+      <>Моноцвет</>
+    )}/>
+
+    <div className='filter-container'>
+      <button onClick={() => filterByType('all')}>Все</button>
+      <button onClick={() => filterByType('1 НФ')}>1 НФ</button>
+      <button onClick={() => filterByType('1.4 НФ')}>1.4 НФ</button>
+    </div>
+      <div className='brick-container'> 
+        {filteredData.map((brick)=>(
+          <div className='brick-card' key={brick.id}>
+            <ul>
+              <li> <img src={brick.image} alt='brick-photo'/> </li>
+              <li> <h1>{brick.name}</h1> </li>
+              <li> {brick.description} </li>
+              <li> {brick.price}</li>
+              <li> <button onClick={() => handleClick()}>Подробнее</button></li>
+            </ul>
+          </div>
+        ))}
+    </div>
+  </div>
+);
 }
 
 export default MonoColor;
