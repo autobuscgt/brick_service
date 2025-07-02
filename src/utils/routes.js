@@ -1,9 +1,10 @@
 import Admin from "../pages/Admin";
+import MonoColor from "../pages/Bricks/MonoColor";
+import MultiColors from "../pages/Bricks/MultiColors";
 import Calculator from "../pages/Calculator";
-import Contact from "../pages/Contact";
 import Homepage from "../pages/Homepage";
 import ProductPage from "../pages/ProductPage";
-import { ADMIN_ROUTE, CALCULATOR_ROUTE, CONTACT_ROUTE, HOMEPAGE_ROUTE, PRODUCT_ROUTE } from "./consts";
+import { ADMIN_ROUTE, CALCULATOR_ROUTE, HOMEPAGE_ROUTE, MULTICOLORS_ROUTE, PLAIN_ROTE,PRODUCT_ROUTE } from "./consts";
 
 export const routes = [
     {
@@ -15,8 +16,12 @@ export const routes = [
         Component: Calculator
     },
     {
-        path:CONTACT_ROUTE,
-        Component:Contact
+        path:MULTICOLORS_ROUTE,
+        Component:MultiColors
+    },
+    {
+        path:PLAIN_ROTE,
+        Component:MonoColor
     },
     {
         path:PRODUCT_ROUTE + '/:id',

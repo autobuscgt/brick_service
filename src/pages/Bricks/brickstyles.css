@@ -1,0 +1,67 @@
+.brick-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-left: auto;
+    margin-right: auto;
+}
+.brick-card{
+    width: 300px;
+    min-height: 300px;
+    display: flex;
+    margin: 10px;
+    justify-content: flex-start;
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 15px;
+}
+.brick-card img{
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+.brick-card h1{
+    font-size: 20px;
+    color: #404040;
+    font-weight: 200;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.brick-card li{
+    padding-left: 0px;
+    margin: 0px;
+}
+.brick-card ul{
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+/* Кнопка */
+.brick-card button{
+    width: 100%;
+    background-color: #00b7ff;
+    color: white;
+    border: #00b7ff;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 4%;
+    transition: 0.2s;
+}
+.brick-card button:hover{
+    background-color: white;
+    border: 1px solid #00b7ff;
+    color: #00b7ff;
+    transition: 0.2s;
+}
+.brick-card a{
+    text-decoration: none;
+    color: white;
+
+}
+.brick-card a:hover{
+    color: #00b7ff;
+
+}

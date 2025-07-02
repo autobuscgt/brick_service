@@ -1,5 +1,6 @@
 export const HOMEPAGE_ROUTE = '/'
-export const CONTACT_ROUTE = '/contact'
 export const ADMIN_ROUTE = '/admin'
 export const CALCULATOR_ROUTE = '/calculator'
+export const PLAIN_ROTE = '/plain'
+export const MULTICOLORS_ROUTE = '/mixed'
 export const PRODUCT_ROUTE = '/product'
