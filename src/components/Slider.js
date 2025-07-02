@@ -22,7 +22,7 @@ function Slider({frst,scnd,thrd,fourth}) {
       } } aria-label="Slider">
     <SplideSlide>
         <div className='slider-container'>
-            <h1>{fourth}</h1>
+            <h1>{frst}</h1>
                 <video autoPlay loop muted playsInline>
                     <source src={production_line} ></source>
                 </video>
@@ -30,7 +30,7 @@ function Slider({frst,scnd,thrd,fourth}) {
     </SplideSlide>
     <SplideSlide>
         <div className='slider-container'>
-            <h1>{thrd}</h1>
+            <h1>{scnd}</h1>
                 <video autoPlay loop muted playsInline>
                     <source src={production_video} ></source>
                 </video>
@@ -38,7 +38,7 @@ function Slider({frst,scnd,thrd,fourth}) {
     </SplideSlide>
     <SplideSlide>
         <div className='slider-container'>
-            <h1>{frst}</h1>
+            <h1>{thrd}</h1>
             <img src={colors} alt=" 1" loading='lazy'/>
         </div>
           </SplideSlide>
@@ -46,7 +46,7 @@ function Slider({frst,scnd,thrd,fourth}) {
        
     <SplideSlide>
         <div className='slider-container'>
-            <h1>{scnd}</h1>
+            <h1>{fourth}</h1>
              <img src={wide_range} alt=" 2" loading='lazy'/>
         </div>
      </SplideSlide>
