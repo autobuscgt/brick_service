@@ -17,10 +17,8 @@ function Homepage() {
             <Suspense fallback={<p>Loading...</p>}>
                 <Banner/>
             </Suspense>
-            <TextHM prop={'Наши работы'}/>
-            <Suspense>
-                <Slider frst = 'Большой выбор' scnd ='Разные цвета'  thrd='Свое производство'/>
-            </Suspense>
+            
+
             <Suspense fallback={<p>Loading...</p>}>
                     <div className='description'>
                         <TEMP/>
@@ -32,6 +30,9 @@ function Homepage() {
             </Suspense>
                 <TextHM prop={'Преимущества компании'}/>
             <Advantage/>
+            <Suspense>
+                <Slider frst = 'Большой выбор' scnd ='Разные цвета'  thrd='Высококачественное сырье'/>
+            </Suspense>
             {/* <TextHM prop={'Проекты'}/>
             <div className='project-slider'>
             <ProjectSlider/>
