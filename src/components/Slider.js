@@ -30,7 +30,7 @@ function Slider({frst,scnd,thrd,fourth}) {
     </SplideSlide>
     <SplideSlide>
         <div className='slider-container'>
-            <h1>{scnd}</h1>
+            <h1>{thrd}</h1>
                 <video autoPlay loop muted playsInline>
                     <source src={production_video} ></source>
                 </video>
@@ -38,7 +38,7 @@ function Slider({frst,scnd,thrd,fourth}) {
     </SplideSlide>
     <SplideSlide>
         <div className='slider-container'>
-            <h1>{thrd}</h1>
+            <h1>{scnd}</h1>
             <img src={colors} alt=" 1" loading='lazy'/>
         </div>
           </SplideSlide>
