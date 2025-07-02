@@ -31,7 +31,7 @@ function Homepage() {
                 <TextHM prop={'Преимущества компании'}/>
             <Advantage/>
             <Suspense>
-                <Slider frst = 'Большой выбор' scnd ='Разные цвета'  thrd='Высококачественное сырье'/>
+                <Slider frst = 'Автоматизированная линия' scnd ='Большой выбор'  thrd='Высококачественное сырье' fourth='Разные цвета'/>
             </Suspense>
             {/* <TextHM prop={'Проекты'}/>
             <div className='project-slider'>
